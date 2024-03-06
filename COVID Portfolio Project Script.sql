@@ -1,34 +1,34 @@
---select *
---From PortfolioProject..['Covid Deaths$']
---where continent is not null
---order by 3,4
+select *
+From PortfolioProject..['Covid Deaths$']
+where continent is not null
+order by 3,4
 
 --select *
---From PortfolioProject..['Covid Vaccination$']
---order by 3,4
+From PortfolioProject..['Covid Vaccination$']
+order by 3,4
 
 --Select Data that we are using in this project
 
---select location, date, total_cases, new_cases, total_deaths, population
---From PortfolioProject..['Covid Deaths$']
---order by 1,2
+select location, date, total_cases, new_cases, total_deaths, population
+From PortfolioProject..['Covid Deaths$']
+order by 1,2
 
 -- Looking at Total Cases vs Total Deaths
---shows the likelyhood of dying should you contact covid in united kingdom
---Select location, date, total_cases, total_deaths, (cast(total_deaths as float)/cast(total_cases as float))*100 as DeathPercentage
---From PortfolioProject..['Covid Deaths$']
---where location like '%Kingdom%'
---order by 1,2
+shows the likelyhood of dying should you contact covid in united kingdom
+Select location, date, total_cases, total_deaths, (cast(total_deaths as float)/cast(total_cases as float))*100 as DeathPercentage
+From PortfolioProject..['Covid Deaths$']
+where location like '%Kingdom%'
+order by 1,2
 
 
 --looking at Total Cases vs Population
 --shows what percentage of population got covid
 
---Select location, date, total_cases, total_deaths, (total_cases/population)*100 as Percentage_Population_infected
---From PortfolioProject..['Covid Deaths$']
---where location like '%Kingdom%'
---and continent is not null
---order by 1,2
+Select location, date, total_cases, total_deaths, (total_cases/population)*100 as Percentage_Population_infected
+From PortfolioProject..['Covid Deaths$']
+where location like '%Kingdom%'
+and continent is not null
+order by 1,2
 
 --looking at countries with highest infection rate compare to population
 
